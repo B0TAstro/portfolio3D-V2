@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera } from '@react-three/drei';
-import Computers from '../components/Computers.jsx';
+// import Computers from '../components/Computers.jsx';
+import Office from '../components/Office.jsx';
 import CanvasLoader from '../components/CanvasLoader.jsx';
 import { Leva, useControls } from 'leva';
 
@@ -50,9 +51,9 @@ const Hero = () => {
                 <Canvas className="w-full h-full">
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-                        <Computers scale={2.7} position={[0, -13, 0]} rotation={[0, 0, 0]} />
-                        <ambientLight intensity={0.1} />
-                        <directionalLight intensity={2} position={[10, 5, 5]} />
+                        <Office scale={8} position={[9, -12, 0]} rotation={[0, 4.7, 0]} />
+                        <ambientLight intensity={1} />
+                        <directionalLight position={[10, 10, 10]} intensity={0.5} />
                     </Suspense>
                 </Canvas>
             </div>
